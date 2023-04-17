@@ -13,6 +13,8 @@ import de.congrace.exp4j.ExpressionBuilder;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //Declaração de variáveis
+    
     private static final String TAG = "ifsuldeminas.mch.calc";
     private Button buttonIgual;
     private TextView textViewResultado;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Double resultado = 0.0;
     private boolean operadorSelecionado = false;
 
+    //Preparando as variáveis para "conectar" com a view
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonNoveID = findViewById(R.id.buttonNoveID);
         buttonNoveID.setOnClickListener(this);
 
+        //colocando os valores das teclas na tela, na região "ultima expressão"
 
         buttonVirgulaID.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        //limpa a tela
         buttonResetID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        //apaga o ultimo caractere
         buttonDeleteID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -222,6 +228,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+    //lógica da calculadora
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.buttonIgualID) {
